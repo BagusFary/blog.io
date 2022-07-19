@@ -1,0 +1,22 @@
+Post::create([
+    'title' => 'Judul Ketiga',
+    'category_id' => 3,
+    'slug' => 'judul-ketiga',
+    'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'body' => '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, quo alias consectetur nihil quae quos pariatur! Ducimus sint vero dolorem voluptate perspiciatis delectus.</p><p> itaque reiciendis doloremque nihil harum, nostrum earum, neque alias illo hic est laboriosam deserunt rem eligendi quaerat? Officiis iusto ut, atque neque quos omnis esse voluptas? Recusandae explicabo, doloribus unde inventore temporibus voluptatibus et aliquam repudiandae</p><p>accusantium aut nulla iste aspernatur, tempora excepturi. Voluptas harum, dolorem consequuntur quisquam maiores dignissimos officia optio minus culpa? Velit aperiam explicabo natus, dolor aspernatur mollitia expedita perspiciatis in delectus placeat quisquam quis quidem dolore rem nisi sed asperiores incidunt quae? Corrupti.</p>'
+
+])
+
+
+    {{-- Bootstrap Icons --}}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    
+    {{-- My Style --}}
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Study2 | {{ $title }}</title>
+  </head>
+  <body>
+   
+                @include('partials.navbar')

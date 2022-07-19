@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Edit Post</h1>
+    <h1 class="h2">Edit Blog</h1>
   </div>
 
 <div class="col-lg-8">
@@ -11,7 +11,7 @@
     @method('put')
     @csrf
     <div class="mb-3">
-      <label for="title" class="form-label">Judul Film</label>
+      <label for="title" class="form-label">Judul Blog</label>
       <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title', $post->title) }}">
       @error('title')
       <div class="invalid-feedback">
@@ -29,7 +29,7 @@
       @enderror
       </div>
     <div class="mb-3">
-        <label for="category" class="form-label">Genre</label>
+        <label for="category" class="form-label">Kategori</label>
         <select class="form-select" name="category_id">
             @foreach ($categories as $category)
             @if(old('category_id', $post->category_id) == $category->id)
@@ -42,7 +42,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="image" class="form-label">Post Image</label>
+        <label for="image" class="form-label">Blog Image</label>
         <input type="hidden" name="oldImage" value="{{ $post->image }}">
         @if($post->image)
         <img src="{{ asset('storage/' . $post->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
@@ -58,7 +58,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="body" class="form-label">Body</label>
+        <label for="body" class="form-label">Isi Blog</label>
         @error('body')
         <p class="text-danger">{{ $message }}</p>
         @enderror
@@ -67,35 +67,10 @@
       </div>
 
       <div class="mb-3">
-        <label for="tanggal" class="form-label">Tanggal</label>
+        <label for="tanggal" class="form-label">Tanggal Upload</label>
         <input type="date" class="form-control @error('tanggal') is-invalid @enderror" id="tanggal" name="tanggal" required autofocus value="{{ old('tanggal', $post->tanggal) }}">
         </div>
 
-        <div class="mb-3">
-          <label for="jam_mulai" class="form-label">Jam Mulai</label>
-          <input type="time" class="form-control @error('jam_mulai') is-invalid @enderror" id="jam_mulai" name="jam_mulai" required autofocus value="{{ old('jam_mulai', $post->jam_mulai) }}">
-          </div>
-
-          <div class="mb-3">
-            <label for="jam_selesai" class="form-label">Jam Selesai</label>
-            <input type="time" class="form-control @error('jam_selesai') is-invalid @enderror" id="jam_selesai" name="jam_selesai" required autofocus value="{{ old('jam_selesai', $post->jam_selesai) }}">
-            </div>
-
-          <label class="sr-only" for="harga">Harga</label>
-          <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text">Rp.</div>
-            </div>
-            <input type="text" class="form-control @error('harga') is-invalid @enderror" id="harga" name="harga" required autofocus value="{{ old('harga', $post->harga) }}">
-          </div>
-          
-          <label class="sr-only" for="harga_diskon">Harga Diskon</label>
-          <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text">Rp.</div>
-            </div>
-            <input type="text" class="form-control @error('harga_diskon') is-invalid @enderror" id="harga_diskon" name="harga_diskon" autofocus value="{{ old('harga_diskon', $post->harga_diskon) }}">
-          </div>
 
     <button type="submit" class="btn btn-primary">Update Post</button>
   </form>

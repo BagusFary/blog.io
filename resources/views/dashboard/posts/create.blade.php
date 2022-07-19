@@ -3,14 +3,14 @@
 @section('container')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Create New Movie</h1>
+    <h1 class="h2">Create New Blog</h1>
   </div>
 
 <div class="col-lg-8">
   <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
-      <label for="title" class="form-label">Nama Film</label>
+      <label for="title" class="form-label">Nama Blog</label>
       <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title') }}">
       @error('title')
       <div class="invalid-feedback">
@@ -28,7 +28,7 @@
       @enderror
       </div>
     <div class="mb-3">
-        <label for="category" class="form-label">Genre</label>
+        <label for="category" class="form-label">Kategori</label>
         <select class="form-select" name="category_id">
             @foreach ($categories as $category)
             @if(old('category_id') == $category->id)
@@ -41,7 +41,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="image" class="form-label">Gambar Film</label>
+        <label for="image" class="form-label">Gambar Blog</label>
         <img class="img-preview img-fluid mb-3 col-sm-5">
         <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
         @error('image')
@@ -52,7 +52,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="body" class="form-label">Deskripsi Film</label>
+        <label for="body" class="form-label">Deskripsi Blog</label>
         @error('body')
         <p class="text-danger">{{ $message }}</p>
         @enderror
@@ -61,28 +61,11 @@
       </div>
 
       <div class="mb-3">
-        <label for="tanggal" class="form-label">Tanggal</label>
+        <label for="tanggal" class="form-label">Tanggal Upload</label>
         <input type="date" class="form-control" id="tanggal" name="tanggal" required value="{{ old('tanggal') }}">  
       </div>
 
-      <div class="mb-3">
-        <label for="jam_mulai" class="form-label">Jam Mulai</label>
-        <input type="time" class="form-control" id="jam_mulai" name="jam_mulai" required value="{{ old('jam_mulai') }}">  
-      </div>
-
-      <div class="mb-3">
-        <label for="jam_selesai" class="form-label">Jam Selesai</label>
-        <input type="time" class="form-control" id="jam_selesai" name="jam_selesai" required value="{{ old('jam_selesai') }}">  
-      </div>
-
-      <label class="sr-only" for="harga">Harga</label>
-  <div class="input-group mb-2 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text">Rp.</div>
-    </div>
-    <input type="text" class="form-control" id="harga" name="harga" required value="{{ old('harga') }}">
-  </div>
-
+ 
 
     <button type="submit" class="btn btn-primary mt-3">Create New Movie</button>
   </form>

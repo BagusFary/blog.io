@@ -44,10 +44,10 @@
       <h5>
         <small class="text-dark">
          {{-- By. <a href="/posts?author={{ $posts[0]->author->username }}" class="text-decoration-none">{{ $posts[0]->author->name }}</a>  --}}
-         Genre <a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none text-success">{{ $posts[0]->category->name }}</a> 
-         <p>akan tayang pada <span class="badge bg-warning text-dark">{{ $posts[0]->tanggal }}</span></p>
-          <h5> <span class="badge bg-warning text-dark">{{ $posts[0]->jam_mulai }} - {{ $posts[0]->jam_selesai }}</span></h5>
-         {{-- <p>{{ $posts[0]->created_at->diffForHumans() }}</p> --}}
+         Kategori <a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none text-success">{{ $posts[0]->category->name }}</a> 
+         <p>Diupload Pada <span class="badge bg-warning text-dark">{{ $posts[0]->tanggal }}</span></p>
+          {{-- <h5> <span class="badge bg-warning text-dark">{{ $posts[0]->jam_mulai }} - {{ $posts[0]->jam_selesai }}</span></h5>
+           <p>{{ $posts[0]->created_at->diffForHumans() }}</p>  
           </small>
         </h5>
         @if ($posts[0]->harga_diskon)
@@ -60,7 +60,7 @@
         <h5>Harga Tiket</h5>
         <h3><span class="badge bg-secondary text-decoration-none">Rp.{{ $posts[0]->harga }}</span></h3>
 
-        @endif
+        @endif --}}
        
     
       <p class="card-text text-dark">{{ $posts[0]->excerpt }}</p>
@@ -92,11 +92,14 @@
                       <h4 class="card-title text-dark">{{ $post->title }} </h4>
                       <h5>
                         <small class="text-dark">
-                          Genre <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none text-primary">{{ $post->category->name }}</a> <span class="badge bg-warning text-dark">{{ $post->tanggal }}</span>
-                          <h5><span class="badge bg-warning text-dark mt-2">{{ $post->jam_mulai }} - {{ $post->jam_selesai }}</span></h5>
+                          Kategori <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none text-primary">{{ $post->category->name }}</a> 
+                          <small>
+                          <span class="badge bg-warning text-dark"> <span>Diupload Pada </span>{{ $post->tanggal }}</span>
+                        </small>
+                          {{-- <h5><span class="badge bg-warning text-dark mt-2">{{ $post->jam_mulai }} - {{ $post->jam_selesai }}</span></h5> --}}
                           </small>
                         </h5>
-                        @if ($post->harga_diskon)
+                        {{-- @if ($post->harga_diskon)
                           <h5>Harga Tiket</h5>
                           <h4><span class="badge bg-secondary text-decoration-line-through">Rp.{{ $post->harga }}</span></h4>
                           <h3><span class="badge bg-success">Rp.{{ $post->harga_diskon }}</span></h3>
@@ -106,7 +109,7 @@
                           <h5>Harga Tiket</h5>
                           <h4><span class="badge bg-secondary text-decoration-none">Rp.{{ $post->harga }}</span></h4>
 
-                          @endif            
+                          @endif             --}}
                       <p class="card-text text-dark">{{ $post->excerpt }}</p>
                       <a href="/posts/{{ $post->slug }}" class="btn btn-outline-dark">Read More</a>
                     </div>

@@ -13,7 +13,7 @@
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
             <span data-feather="file-text"></span>
-            Create New Movie / Add Discount
+            Create New Blog
           </a>
         </li>
       </ul>
@@ -22,7 +22,7 @@
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
             <span data-feather="grid"></span>
-            Create Movie Genre
+            Create Blog Category
           </a>
         </li>
       </ul> 

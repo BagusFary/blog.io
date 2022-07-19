@@ -15,7 +15,7 @@
     {{-- My Style --}}
     <link rel="stylesheet" href="/css/style.css">
 
-    <title>Bioskop XXI | {{ $title }}</title>
+    <title>YourBlog | {{ $title }}</title>
     {{-- <style type="text/css">
       body   {
         

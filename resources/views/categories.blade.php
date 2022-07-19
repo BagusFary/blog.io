@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<h1 class="display-3 mb-5 row justify-content-center text-dark">Genre Film</h1>
+<h1 class="display-3 mb-5 row justify-content-center text-dark">Kategori Blog</h1>
 
 
 <div class="container">

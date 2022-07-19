@@ -121,7 +121,7 @@
 
 
 @else
-  <p class="text-center fs-4 text-dark">Film tidak ditemukan :(</p>
+  <p class="text-center fs-4 text-dark">Blog tidak ditemukan :(</p>
 @endif
 
     <div class="d-flex justify-content-center">

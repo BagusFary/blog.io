@@ -50,10 +50,8 @@ class DashboardPostController extends Controller
             'category_id' => 'required',
             'image' => 'image|file|max:1024',
             'body' => 'required',
-            'tanggal' => 'required',
-            'jam_mulai' => 'required',
-            'jam_selesai' => 'required',
-            'harga' => 'required'
+            'tanggal' => 'required'
+            
 
         ]);
 
@@ -111,11 +109,7 @@ class DashboardPostController extends Controller
             'category_id' => 'required',
             'image' => 'image|file|max:1024',
             'body' => 'required',
-            'tanggal' => 'required',
-            'jam_mulai' => 'required',
-            'jam_selesai' => 'required',
-            'harga' => 'required',
-            'harga_diskon' => '' 
+            'tanggal' => 'required' 
         ];
 
         

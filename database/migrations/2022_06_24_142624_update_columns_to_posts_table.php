@@ -34,8 +34,8 @@ class UpdateColumnsToPostsTable extends Migration
             // $table->dropColumn('jam_mulai');
             // $table->dropColumn('jam_selesai');
             // $table->dropColumn('showtime');
-            // $table->dropColumn('harga');
-            $table->dropColumn('harga_diskon');
+            $table->dropColumn('harga');
+            // $table->dropColumn('harga_diskon');
         });
     }
 }

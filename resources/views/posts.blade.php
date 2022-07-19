@@ -43,13 +43,16 @@
       <h3 class="card-title"><a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none text-dark display-5">{{ $posts[0]->title }}</a></h3>
       <h5>
         <small class="text-dark">
-         {{-- By. <a href="/posts?author={{ $posts[0]->author->username }}" class="text-decoration-none">{{ $posts[0]->author->name }}</a>  --}}
+       <h5>
+        <small class="text-dark"> By. <a href="/posts?author={{ $posts[0]->author->username }}" class="text-decoration-none">{{ $posts[0]->author->name }}</a></small>
+       </h5>
          Kategori <a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none text-success">{{ $posts[0]->category->name }}</a> 
-         <p>Diupload Pada <span class="badge bg-warning text-dark">{{ $posts[0]->tanggal }}</span></p>
+         <p>Diupload Pada <span class="badge bg-warning text-dark">{{ $posts[0]->tanggal }}</span></p></small>
+        </h5>
           {{-- <h5> <span class="badge bg-warning text-dark">{{ $posts[0]->jam_mulai }} - {{ $posts[0]->jam_selesai }}</span></h5>
            <p>{{ $posts[0]->created_at->diffForHumans() }}</p>  
-          </small>
-        </h5>
+          
+        
         @if ($posts[0]->harga_diskon)
         <h5>Harga Tiket</h5>
         <h4><span class="badge bg-secondary text-decoration-line-through">Rp.{{ $posts[0]->harga }}</span></h4>
@@ -92,6 +95,9 @@
                       <h4 class="card-title text-dark">{{ $post->title }} </h4>
                       <h5>
                         <small class="text-dark">
+                          <h5>
+                            <small class="text-dark"><p>By. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a></p></small>
+                          </h5>
                           Kategori <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none text-primary">{{ $post->category->name }}</a> 
                           <small>
                           <span class="badge bg-warning text-dark"> <span>Diupload Pada </span>{{ $post->tanggal }}</span>

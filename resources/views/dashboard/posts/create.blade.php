@@ -67,7 +67,7 @@
 
  
 
-    <button type="submit" class="btn btn-primary mt-3">Create New Movie</button>
+    <button type="submit" class="btn btn-primary mt-3">Create New Blog</button>
   </form>
 </div>
 
